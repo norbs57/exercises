@@ -1,1 +1,1 @@
-# Programming Exercises 
+Some Kattis programming exercises
