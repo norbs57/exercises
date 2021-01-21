@@ -6,16 +6,17 @@ import (
 	"time"
 )
 
-func Tsp() {
+func Tsp() ([]int,int) {
 	start := time.Now()
 	fPoints := ReadMatrix()
 	dist := DistFromFPoints(fPoints)
 	tour := NearestNeighbourFromDist(dist)
 	cost := CostOfClosedTour(dist, tour)
-	fmt.Println("nn tour, cost=", cost, ":", tour)
+	// fmt.Println("nn tour, cost=", cost)
 	tour = ThreeOpt(tour, dist, start)
 	cost = CostOfClosedTour(dist, tour)
-	fmt.Println("three opt tour, cost=", cost,  ":", tour)
+	fmt.Println("three opt tour, cost=",cost)
+	return tour,cost 
 }
 
 func ReadMatrix() [][]float64 {
