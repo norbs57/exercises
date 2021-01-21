@@ -1,1 +1,1 @@
-Some Kattis programming exercises
+Some Kattis programming exercises in Go
